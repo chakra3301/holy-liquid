@@ -3,18 +3,12 @@ html, body {
 }
 
 body {
-  min-height: 100vh;
   margin: 0;
   padding: 0;
-  background: url('../assets/BG.gif') no-repeat center center fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-color: #222;
-  padding-bottom: 80px; /* Adjust this value based on your footer height */
+  min-height: 100vh;
   position: relative;
   overflow-x: hidden;
+  background-color: #000;
   font-family: 'Arial', sans-serif;
   color: #fff;
 }
@@ -156,40 +150,32 @@ img {
   filter: drop-shadow(0 0 10px rgba(0, 200, 255, 0.6));
 }
 
-/* Footer and Social Links Styles */
-.footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-  z-index: 1000;
-}
-
+/* Social Links Styles */
 .social-links {
-  display: flex;
-  justify-content: flex-end;
-  gap: 20px;
-  padding: 0 40px;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: flex;
+    gap: 20px;
+    z-index: 1000;
 }
 
 .social-button {
-  display: block;
-  transition: transform 0.3s ease;
+    display: block;
+    transition: transform 0.3s ease;
 }
 
 .social-button:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .social-icon {
-  width: 40px;
-  height: 40px;
-  filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.5));
-  transition: filter 0.3s ease;
+    width: 40px;
+    height: 40px;
+    filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.5));
+    transition: filter 0.3s ease;
 }
 
 .social-button:hover .social-icon {
-  filter: drop-shadow(0 0 12px rgba(0, 255, 255, 0.8));
+    filter: drop-shadow(0 0 12px rgba(0, 255, 255, 0.8));
 }
