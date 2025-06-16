@@ -14,6 +14,9 @@ body {
   background-color: #222;
   padding-bottom: 80px; /* Adjust this value based on your footer height */
   position: relative;
+  overflow-x: hidden;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
 }
 
 /* Force common interactive elements to inherit the custom cursor */
@@ -155,7 +158,7 @@ img {
 
 /* Footer and Social Links Styles */
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
