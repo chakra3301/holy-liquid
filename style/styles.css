@@ -13,6 +13,7 @@ body {
   background-attachment: fixed;
   background-color: #222;
   padding-bottom: 80px; /* Adjust this value based on your footer height */
+  position: relative;
 }
 
 /* Force common interactive elements to inherit the custom cursor */
@@ -154,7 +155,7 @@ img {
 
 /* Footer and Social Links Styles */
 .footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -165,9 +166,9 @@ img {
 
 .social-links {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 20px;
-  padding: 0 20px;
+  padding: 0 40px;
 }
 
 .social-button {
