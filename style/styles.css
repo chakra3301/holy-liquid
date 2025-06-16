@@ -152,12 +152,11 @@ img {
 }
 
 .social-links {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
   display: flex;
   gap: 15px;
-  z-index: 1000;
+  justify-content: flex-end;
+  margin-top: 20px;
+  margin-right: 20px;
 }
 
 .social-button {
