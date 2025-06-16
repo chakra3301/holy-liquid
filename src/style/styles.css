@@ -1,0 +1,181 @@
+html, body {
+  cursor: url('../assets/cursor.png') 0 0, auto !important;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: url('../assets/BG.gif') no-repeat center center fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: #222;
+}
+
+/* Force common interactive elements to inherit the custom cursor */
+a, button, input, textarea, select {
+  cursor: inherit !important;
+}
+
+.title-image {
+  display: block;
+  margin: 40px auto 0 auto;
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  animation: float 4s ease-in-out infinite, glow 2s ease-in-out infinite;
+  filter: drop-shadow(0 0 12px rgba(0, 255, 255, 0.5));
+}
+
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes glow {
+  0%, 100% { filter: drop-shadow(0 0 12px rgba(0, 255, 255, 0.5)); }
+  50%      { filter: drop-shadow(0 0 24px rgba(0, 255, 255, 0.9)); }
+}
+
+@media (max-width: 800px) {
+  body {
+    background-image: url('../assets/phonebg.gif');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll; /* override fixed */
+    background-size: cover; /* better than auto for mobile */
+    background-color: #000; /* fallback */
+  }
+}
+@media (max-width: 600px) {
+  .title-image {
+    max-width: 80vw;
+  }
+}
+.subtitle-image {
+  display: block;
+  margin: 20px auto 0 auto;
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  animation: float-sub 6s ease-in-out infinite, glow-sub 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4));
+}
+
+@keyframes float-sub {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+
+@keyframes glow-sub {
+  0%, 100% { filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3)); }
+  50%      { filter: drop-shadow(0 0 18px rgba(255, 255, 255, 0.6)); }
+}
+.center-icon {
+  display: block;
+  margin: 60px auto 0 auto;
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 5;
+  animation: float-flask 5s ease-in-out infinite, pulse-light 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 15px rgba(0, 255, 255, 0.7));
+}
+
+@keyframes float-flask {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+
+@keyframes pulse-light {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.6)) brightness(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 30px rgba(0, 255, 255, 1)) brightness(1.2);
+  }
+}
+
+@keyframes glow-flask {
+  0%, 100% { filter: drop-shadow(0 0 12px rgba(0, 255, 255, 0.6)); }
+  50%      { filter: drop-shadow(0 0 20px rgba(0, 255, 255, 1)); }
+}
+.buy-button {
+  display: block;
+  margin: 60px auto;
+  width: fit-content;
+  transition: transform 0.3s ease;
+}
+
+.buy-button img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  animation: glow-buy 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px rgba(0, 200, 255, 0.6));
+}
+
+.buy-button:hover {
+  transform: scale(1.05);
+}
+
+@keyframes glow-buy {
+  0%, 100% { filter: drop-shadow(0 0 10px rgba(0, 200, 255, 0.5)); }
+  50%      { filter: drop-shadow(0 0 20px rgba(0, 255, 255, 1)); }
+}
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+img {
+  user-select: none;
+}
+.buy-button {
+  pointer-events: auto;
+}
+.buy-button img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  animation: glow-buy 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px rgba(0, 200, 255, 0.6));
+}
+
+.social-links {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.social-button {
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.social-button:hover {
+  transform: scale(1.1);
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.5));
+  transition: filter 0.3s ease;
+}
+
+.social-button:hover .social-icon {
+  filter: drop-shadow(0 0 12px rgba(0, 255, 255, 0.8));
+}
